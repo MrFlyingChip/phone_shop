@@ -1,0 +1,23 @@
+.phone-image{
+    width: 200px;
+    display: inline-block;
+    height: 300px;
+    vertical-align: bottom;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.phone{
+    border: 1px #8d8d8d solid;
+    border-radius: 10px;
+    width: 200px;
+    margin: 10px;
+    height: 400px;
+    flex-shrink: 0;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
