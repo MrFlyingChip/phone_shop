@@ -31,15 +31,18 @@ export class Phone extends Component {
             <div className="phone">
                 <p className={'phone-name'}>{phone.productName}</p>
                 <div className={'phone-image'} style={{backgroundImage: 'url(' + phone.image + ')'}}></div>
-                <p className={'phone-info'}>OS: {phone.operationSystem}</p>
-                <p className={'phone-info'}>NumCards: {phone.numSimCard}</p>
-                <p className={'phone-price'}>{phone.priceUAH}₴</p>
-                {(this.canBuyPhone(phone)) ?
-                    (!this.isInCart(phone)) ?
-                    <button onClick={this.addToCart.bind(this)}>Buy now</button>
-                        : <button>In cart</button>
-                    : <button>Not available</button>
-                }
+                <div className={'phone-info-holder'}>
+                    <p className={'phone-info'}>{phone.brandName}</p>
+                    <p className={'phone-info'}>OS: {phone.operationSystem}</p>
+                    <p className={'phone-info'}>NumCards: {phone.numSimCard}</p>
+                    <p className={'phone-price'}>{phone.priceUAH}₴</p>
+                    {(this.canBuyPhone(phone)) ?
+                        (!this.isInCart(phone)) ?
+                            <button onClick={this.addToCart.bind(this)} className={'buy-button available'}>Buy now</button>
+                            : <button className={'buy-button in-cart'}>In cart</button>
+                        : <button className={'buy-button not-available'}>Not available</button>
+                    }
+                </div>
             </div>
         );
     }

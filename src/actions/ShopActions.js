@@ -1,4 +1,4 @@
-import {IMAGE_URL, API_URL, FETCH_ALL_PHONES, ADD_TO_CART, REMOVE_FROM_CART, CHECK_COOKIE} from "../constants/Shop";
+import {IMAGE_URL, API_URL, FETCH_ALL_PHONES, ADD_TO_CART, REMOVE_FROM_CART, CHECK_COOKIE, RELOAD_COOKIE} from "../constants/Shop";
 import fetch from 'cross-fetch'
 
 export function fetchAllPhones() {
@@ -50,6 +50,17 @@ export function addToCart(phone) {
         window.localStorage.setItem('rr_cart', JSON.stringify(cart));
         dispatch({
             type: ADD_TO_CART,
+            payload: cart
+        });
+    }
+}
+
+export function reloadCartCookie() {
+    return (dispatch, getState) => {
+        const cart = getState().shop.cart;
+        window.localStorage.setItem('rr_cart', JSON.stringify(cart));
+        dispatch({
+            type: RELOAD_COOKIE,
             payload: cart
         });
     }

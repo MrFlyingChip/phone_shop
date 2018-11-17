@@ -11,13 +11,55 @@
 .phone{
     border: 1px #8d8d8d solid;
     border-radius: 10px;
-    width: 200px;
+    width: 220px;
     margin: 10px;
     height: 400px;
     flex-shrink: 0;
     padding: 1px;
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
     flex-direction: column;
+}
+
+.phone-name{
+    text-align: center;
+    font-size: 13pt;
+    margin: 5px;
+}
+
+.phone-price{
+    font-size: 20pt;
+    margin: 5px;
+    color: #ff811a;
+}
+
+.phone-info{
+    margin: 0px;
+}
+
+.phone-info-holder{
+    text-align: center;
+}
+
+.buy-button{
+    margin-bottom: 5px;
+    padding: 5px 15px 5px 15px;
+    border: none;
+    border-radius: 5px;
+    outline:none;
+}
+
+.available{
+    background-color: #00b700;
+    color: white;
+}
+
+.not-available{
+    background-color: #ff5252;
+    color: white;
+}
+
+.in-cart{
+    background-color: #2bb2ff;
+    color: white;
 }

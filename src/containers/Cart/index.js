@@ -3,6 +3,7 @@ import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 import * as ShopActions from "../../actions/ShopActions";
 import PhoneTableItem from "../../components/PhoneTableItem";
+import './styles.css';
 
 class Cart extends Component {
 
@@ -12,7 +13,7 @@ class Cart extends Component {
             return <PhoneTableItem phone={item} key={item.id}/>
         });
         return (
-            <div className={'phones'}>
+            <div className={'phones-cart'}>
                 {phones}
             </div>
         );

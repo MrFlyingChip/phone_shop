@@ -1,9 +1,66 @@
 .phone-table-item-image{
-    width: 100px;
+    width: 75px;
     display: inline-block;
-    height: 100px;
+    height: 75px;
     vertical-align: bottom;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    margin: auto 10px auto 10px;
+}
+
+.quantity-input{
+    width: 25px;
+    margin: auto 5px auto 5px;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+.add-amount-btn{
+    border: none;
+    border-radius: 5px;
+    outline:none;
+    background-color: #c3b8ff;
+    width: 25px;
+    height: 25px;
+    margin: auto 5px auto 5px;
+}
+
+.remove-btn{
+    border: none;
+    border-radius: 5px;
+    outline:none;
+    background-color: red;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    margin: auto 5px auto 5px;
+}
+
+.phone-table-item{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.order-sum{
+    width: 50px;
+    font-size: 14pt;
+    margin: auto 5px auto 5px;
+    color: #ff811a;
+}
+
+.phone-table-item-price{
+    font-size: 12pt;
+    margin: auto 5px auto 5px;
+}
+
+.phone-table-order{
+    display: inline-flex;
+}
+
+.phone-table-item-name{
+    margin: auto 10px auto 10px;
+    width: 200px;
+    font-size: 12pt;
 }
